@@ -1,0 +1,662 @@
+/* Подключение шрифтов */
+
+@font-face {
+  font-family: "Circular_Std";
+  src: local("Circular Std Black"), local("Circular-Std-Black"),
+    url("../fonts/CircularStd-Black.woff2") format("woff2"),
+    url("../fonts/CircularStd-Black.woff") format("woff"),
+    url("../fonts/CircularStd-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Circular_Std";
+  src: local("Circular Std Bold"), local("Circular-Std-Bold"),
+    url("../fonts/CircularStd-Bold.woff2") format("woff2"),
+    url("../fonts/CircularStd-Bold.woff") format("woff"),
+    url("../fonts/CircularStd-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Circular_Std";
+  src: local("Circular Std Book"), local("Circular-Std-Book"),
+    url("../fonts/CircularStd-Book.woff2") format("woff2"),
+    url("../fonts/CircularStd-Book.woff") format("woff"),
+    url("../fonts/CircularStd-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Общее */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Circular_Std";
+  font-weight: normal;
+  cursor: default;
+  background: white;
+}
+
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* ШАПКА */
+
+/* меню */
+
+.main_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 45px;
+}
+
+.menu_items {
+  display: block;
+}
+
+.main_nav {
+  margin-top: 15px;
+  width: 393px;
+}
+
+.item {
+  position: relative; 
+  margin-left: 31px;
+  display:  inline-block;
+}
+
+.menu_link {
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #20262a;
+  padding-bottom: 6px;
+  transition-timing-function: ease-in;
+  display: block;
+  margin: 2px
+}
+
+/* кнопка */
+
+.auth {
+  border: 1px solid #00b6f0;
+  border-radius: 85px;
+  padding: 15px 40px;
+  color: #00b6f0;
+  margin-top: 10px;
+}
+
+.log_in {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+
+/* меню анимация */
+
+.menu_link::after {
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #00b6f0;
+  opacity: 0;
+  transition: all 0.2s ease-in;
+}
+
+.menu_link:hover::after {
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #00b6f0;
+  opacity: 1;
+}
+
+.menu_link:hover {
+  text-shadow:0px 0px 1px black;
+}
+
+/* кнопка анимация */
+
+.auth:hover {
+  border: 1px solid #00b6f0;
+  border-radius: 85px;
+  background-color: #00b6f0;
+  color: white;
+  margin-top: 10px;
+}
+
+/* ОСНОВНАЯ ЧАСТЬ */
+
+/* I экран */
+
+/* фон */
+
+.bg1 {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.22) 0%,
+    rgba(0, 225, 198, 0.36) 27.09%,
+    #ffffff 79.56%
+  );
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 10px 0px;
+  padding-top: 100px;
+  padding-bottom: 30px;
+  z-index: -1;
+}
+
+.bg_bubble1 {
+  position: absolute;
+  left: -39.61px;
+  z-index: 1;
+}
+
+.bg_bubble2 {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+/* контент I */
+
+h1 {
+  max-width: 510px;
+  margin: 0 auto;
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 78px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #112d57;
+}
+
+.sub_heading {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 24px;
+  line-height: 38px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #5c5c5c;
+}
+
+.sub1 {
+  max-width: 544px;
+  margin-top: 27px;
+}
+
+.welcome_buttons {
+  max-width: 415px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 87px;
+}
+
+.bluebtn {
+  background: #00b6f0;
+  border: 2px solid #00b6f0;
+  border-radius: 85px;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+
+.get-started {
+  padding: 16px 36px;
+  margin-right: 25px;
+}
+
+.try-for-free {
+  color: #20262a;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  padding: 16px 36px;
+  background: #ffffff;
+  border-radius: 85px;
+  border: 2px solid white;
+}
+
+.first-screen-pic {
+  margin-top: 45px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1120px;
+  max-width: 100%;
+  height: auto;
+  z-index: 2;
+}
+
+/* анимация кнопок */
+
+.try-for-free:hover {
+  color: #00b6f0;
+  border-color: #00b6f0;
+}
+.bluebtn:hover {
+  background: white;
+  color: #00b6f0;
+  border: 2px solid #00b6f0;
+}
+
+/* II экран */
+
+.second_screen {
+  padding: 62px 0;
+}
+
+.text-info {
+  max-width: 634px;
+  margin: 0 auto;
+}
+
+.upper-titles {
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0.1px;
+  color: #f3cd03;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 56px;
+  line-height: 65px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #20262a;
+  margin-bottom: 17px;
+}
+
+.download {
+  padding: 16px 50px;
+  margin-right: 13px;
+}
+
+.transparent_btn {
+  background-color: #ffffff;
+  border: 2px solid #00b6f0;
+  box-sizing: border-box;
+  border-radius: 85px;
+  padding: 16px 49px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #00b6f0;
+}
+
+.transparent_btn:hover {
+  background: #00b6f0;
+  border: 2px solid #00b6f0;
+  border-radius: 85px;
+  color: white;
+}
+
+.welc2 {
+  max-width: 460px;
+}
+
+/* III экран */
+
+.third_screen {
+  padding: 100px 0;
+}
+
+.content-container {
+  max-width: 1045px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.bg_bubble3 {
+  z-index: -5;
+  position: absolute;
+  right: 0;
+}
+
+.content_img {
+  width: 536px;
+  max-width: 100%;
+  height: auto;
+}
+
+.cim {
+  margin-left: 70px;
+}
+
+h3 {
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0.1px;
+  color: #20262a;
+  margin-bottom: 17px;
+}
+
+.desc {
+  text-align: left;
+}
+
+.learn_more {
+  display: inline-block;
+  margin-top: 25px;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+
+.lm {
+  color: #00b6f0;
+  position: relative;
+}
+
+.lm::after {
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  display: block;
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #00b6f0;
+  opacity: 0;
+  transition: all 0.3s ease-in;
+}
+
+.lm:hover::after {
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #00b6f0;
+  opacity: 1;
+}
+
+/* IV экран */
+
+.bg_bubble4 {
+  z-index: -6;
+  position: absolute;
+  left: 0;
+  margin-top: 4px;
+}
+
+.cim2 {
+  margin-right: 60px;
+}
+
+.cn2 {
+  margin-top: 54px;
+}
+
+/* V экран */
+
+.fifth_screen {
+  margin-top: 162px;
+  padding-bottom: 62px;
+}
+
+.sub_paragraph {
+  font-size: 19px;
+  line-height: 30px;
+  letter-spacing: 0.2px;
+  color: #5c5c5c;
+  text-align: center;
+}
+
+.statistic {
+  margin-top: 62px;
+}
+
+.progress-bar {
+  background: #f3f5f8;
+  border-radius: 9.5px;
+  width: 757px;
+  height: 15px;
+  max-width: 100%;
+  max-height: auto;
+  margin: 0 auto;
+}
+
+.blue-bar {
+  display: none;
+  background: #00b6f0;
+  border-radius: 9.5px;
+  width: 377.65px;
+  height: 15px;
+  max-width: 100%;
+  max-height: auto;
+}
+
+.animeblue {
+  transform: translateX;
+  animation-name: Appearance;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-out;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bar-description {
+  max-width: 757px;
+  margin: 7px auto;
+  display: flex;
+}
+
+.counter {
+  margin-left: auto;
+}
+
+.gsff {
+  padding: 16px 46px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 52px;
+}
+
+/* VI экран */
+
+.bg4 {
+  position: relative;
+  margin-top: 62px;
+}
+
+.bg_bubble5_1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bg_bubble5_2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.sixth_screen {
+  padding-top: 159px;
+  padding-bottom: 68px;
+}
+
+.IBM_logo {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.sp2 {
+  max-width: 550px;
+}
+
+.user_profile {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.user_photo {
+  width: 50px;
+  max-width: 100%;
+  height: auto;
+  max-height: auto;
+  margin-right: 20px;
+}
+
+.name {
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #20262a;
+}
+
+.occupation {
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.1px;
+  color: #5c5c5c;
+}
+
+.alltest {
+  padding: 16px 60px;
+}
+
+/* VII экран */
+
+.bg5 {
+  background-color: #182333;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.seventh_screen {
+  display: flex;
+  color: white;
+}
+
+.white {
+  color: white;
+}
+
+.left {
+  text-align: left;
+}
+
+.sub2 {
+  max-width: 437px;
+}
+
+.trial {
+  margin-left: 167px;
+}
+
+.trial_30 {
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.1px;
+  margin-bottom: 10px;
+}
+
+.price5dollars {
+  display: flex;
+  align-items: center;
+  max-width: 233px;
+  margin-bottom: 25px;
+}
+
+.dollar {
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 78px;
+  letter-spacing: 0.2px;
+  color: #f3cd03;
+}
+
+.dollar-month {
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: 0.2px;
+  margin-left: 5px;
+}
+
+.get2 {
+  margin-top: 25px;
+}
+
+/* VIII экран */
+
+.bg6 {
+  padding-top: 50px;
+  padding-bottom: 70px;
+  background: linear-gradient(180deg, #e9faff 0%, rgba(233, 250, 255, 0) 100%);
+}
+
+.left-cont {
+  max-width: 436px;
+  margin-left: auto;
+}
+
+.h3 {
+  max-width: 406px;
+}
+
+.grey {
+  color: #5c5c5c;
+  margin-bottom: 20px;
+}
+
+/* ПОДВАЛ */
+
+.main_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-bottom: 40px;
+}
+
+.subtitle {
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.1px;
+  color: #5c5c5c;
+}
+
+.social-media_link:not(:first-of-type) {
+  margin-left: 30px;
+}
